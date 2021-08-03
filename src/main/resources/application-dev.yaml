@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/kuangstudy-db?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false
+    username: root
+    password: root
+    hikari:
+      connection-timeout: 60000
+      validation-timeout: 3000
+      idle-timeout: 60000
+      login-timeout: 5
+      max-lifetime: 60000
+      maximum-pool-size: 400
+      minimum-idle: 100
+      read-only: false
+
+alipay:
+  appId: 2021000117616191
+  alipayCertPath: cert/alipayCertPublicKey_RSA2.crt
+  alipayRootCertPath: cert/alipayRootCert.crt
+  appCertPath: cert/appCertPublicKey_2021000117616191.crt
+  charset: UTF-8
+  format: json
+  privateKey: MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDc+RfVTMJ5xCac/y6L7RcFW5yCElWy5Uo4Ru/Zm2Cn77e5NqOFsIrxzVu0go6baF0PlBPdu+lH3dY7VMjgGH/hNH8F5pb5oE7d5Yk/jwho+fQLVpOeIOnzW0UE9xLnzfBSgUlR3jFazgAKqvunK5oRQ0L/LeD6jFLRTnC4UaxsFBeAFxpxPb8kPm6OzwPl3zv0zIPnjhUNffJ7mHRSqwoj/RAVqx6aGoy89WEStcFnJu1c2MKJd70OLn7uSG+kRhk3sO8YA1BNmS+abEB61SEXx9AHW4lCNBMGBT7jt0YpTqrFGPxm7m2+4ORRaonPz+4i+tNukBi006W3SvxT+SxlAgMBAAECggEBAKtWeaRqYGEKNuaE9xKIQ9Fjt3cjwE92epYoatHQKKIOveZe92wx94qGMRVGJk1aHs51gvHrQnb3C6X1l8wrMvzsN5HbujTUmFJ2KHWf8mVzakdgWhXCb6TCoEG5Um9qv2050iAoqRw/nsimy3pT1KKOBOTYLhoXtB+XMs+4hHlHqhmmWUp2QG/+jq08gzauFcjQrsroW68ToU3u7E4GVWwrFtocR8nKP2kyPnbMS3j+4abQVuniV1rpmDn1s37UdM5BcuMHnAaKQnDUyGyLxNmPwLsnNi5HKzopUFWhyl1sWP8HphF3HpkT63qf0dZA9MhYM2oYctX4JvEPxn/fYAECgYEA7eGq58VDG2V/hXmD7SHuUp0HSaoGQX8rLDmWVZXBymqRhJ2mdPTW5353ZeK2HyFR0q/emMeMxtP0eKGmu6H4eI5lGMFd70DG+HedK6KXL3TabeJ3U96UEFB6ahAfxi3vBCvhl91cryPNKK/PzxzPI48cQa81LViXzFfYwh8ImPUCgYEA7c28OTJZYCrCyUP80dUacM3ncjO9zFg9vBgDHck69u0BIbCBlxNwvNgJEOe5A0tC6h+BlxYaWd5VLCpimkX4kkzPs1ViUiXG4q/pOzSsm1zb1yB/sB9JJtAzFKuujYcHCLeugCOJw67QAI4z0Kx1xgRT8225PfznZCCfFgRi37ECgYEArmPq8+DEcpg1JXfRBI4EdmISDqnrziZZUyGgmXuhRzBbH9qnRkScK7el9nZ+x1GY95jg2iYoiTanmawAXLvAOTlC2iQgJh7Z/xtJiMy4gxzqaPZGPqEE8PTe2VSaxqG0AN3ek4O/x9G6PKKu+QoIvOvUbj7xAB5bon2gNaekmOUCgYA07BlcfUkIrtuEoR3NsOhefGRqtPsjU+wBRTLEWTlHJL2gusBMV+Y6ELYLzhYNlp1Ar1xOvHuGzoUT/CbPgIzuOivrFDB6aa/WWSHFrFZRiRvfx3rDPmMwQRttGTwSgR9eoEo0eDQ7mVbvGLaNVSQsul/Yh+22zubMELp20ukSMQKBgDHyD59pDLg4kZgxZSS04JDO5t7PuKAqKEUQoC44//YEE+1qPi62YWcBuyvZSJ7b4STphMahiblsbEwi+fZ22gI4SPTzzKk+RVKmcQUbzzEQ8XorlAKsjTBgoONbkdMRlENAhxtBNWFIybsViUDKpMVm3MYOrtm+aTv/itXUmsau
+  serverUrl: https://openapi.alipaydev.com/gateway.do
+  signType: RSA2
+  notifyUrl: http://xianbo.ngrok2.xiaomiqiu.cn/alipay/notifyUrl
+  returnUrl: http://xianbo.ngrok2.xiaomiqiu.cn/alipay/notifyUrl

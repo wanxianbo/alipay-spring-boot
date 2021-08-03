@@ -1,0 +1,26 @@
+spring:
+  freemarker:
+    suffix: .html
+  application:
+    name: alipay-spring-boot
+  profiles:
+    active: dev
+  main:
+    allow-bean-definition-overriding: true
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    locale: zh_CN
+    # 解决json返回过程中long的精度丢失问题
+    generator:
+      write-numbers-as-strings: true
+      write-bigdecimal-as-plain: true
+server:
+  port: 8989
+
+mybatis-plus:
+  mapper-locations: classpath:mapping/**/*.xml
+  type-aliases-package: com.example.alipay.*.entity
+  global-config:
+    db-config:
+      id-type: ASSIGN_ID
